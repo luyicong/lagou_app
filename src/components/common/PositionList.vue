@@ -2,7 +2,7 @@
   <div class="position-list-wrap" v-if="DataList.length">
     <ul class="position-list">
       <!-- <li class="list-item" v-for="item in DataList" link="/detail"> -->
-        <router-link class="list-item" tag="li" v-for="item in DataList" :to="{ name: 'detail', params: { id: 123 }}">
+        <router-link class="list-item" tag="li" v-for="item in DataList" :to="{ path: 'detail', params: { id: 123 }}">
         <div class="img-item">
           <img width="60" height="60" :src="`https://static.lagou.com/${item.companyLogo}`" alt="">
         </div>

@@ -12,7 +12,7 @@ store.registerModule('vux', { // 名字自己定义
     direction: 'forward'
   },
   mutations: {
-    updateLoadingStatus (state, payload) {
+    UPDATE_LOADING (state, payload) {
       state.isLoading = payload.isLoading
     },
     UPDATE_DIRECTION (state, direction) {

@@ -44,17 +44,17 @@ export default {
     })
   },
   methods: {
-    ...mapMutations({updateLoadingStatus:'updateLoadingStatus'}),
+    ...mapMutations({updateLoading:'UPDATE_LOADING'}),
     //获取企业列表
     getList() {
       Api.getIndexPositionList(this.pageNo,20).then((res)=>{
         this.List = this.List.concat(res.content.data.page.result)
-        this.updateLoadingStatus({isLoading: false})
+        this.updateLoading({isLoading: false})
       })
     },
     loadMore() {
       // this.store.vux.commit('updateLoadingStatus', {isLoading: true})
-      this.updateLoadingStatus({isLoading: true})
+      this.updateLoading({isLoading: true})
       this.pageNo++
     }
   },
@@ -77,7 +77,7 @@ export default {
 }
 .footer{
   height: 60px;
-  padding-bottom: 50px;
+  /*padding-bottom: 50px;*/
   /*background: #ddd;*/
   text-align: center;
   line-height: 60px;
