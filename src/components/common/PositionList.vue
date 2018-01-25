@@ -1,7 +1,8 @@
 <template>
   <div class="position-list-wrap" v-if="DataList.length">
     <ul class="position-list">
-      <li class="list-item" v-for="item in DataList">
+      <!-- <li class="list-item" v-for="item in DataList" link="/detail"> -->
+        <router-link class="list-item" tag="li" v-for="item in DataList" :to="{ name: 'detail', params: { id: 123 }}">
         <div class="img-item">
           <img width="60" height="60" :src="`https://static.lagou.com/${item.companyLogo}`" alt="">
         </div>
@@ -13,12 +14,15 @@
           </p>
           <p class="update-time">{{item.createTime}}</p>
         </div>
-      </li>
+      <!-- </li> -->
+      </router-link>
     </ul>
   </div>
 
 </template>
 <script>
+import { mapGetters , mapMutations } from 'vuex'
+
 export default {
   props: {
     DataList:{
@@ -27,9 +31,10 @@ export default {
     }
   },
   name: "",
-  data: () => ({
-
-  })
+  data () {
+    return {
+    }
+  }
 }
 </script>
 <style scoped>

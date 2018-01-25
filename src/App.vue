@@ -2,7 +2,7 @@
   <div id="app">
     <loading v-model="isLoading"></loading>
     <x-header style="position:absolute;top:0;left:0;width:100%;" :left-options={showBack:false} :title="'拉勾网'"></x-header>
-    <router-view></router-view>
+    <router-view :transition="'vux-pop-' + (direction === 'forward' ? 'in' : 'out')"></router-view>
     <tabbar style="position:fixed;">
       <tabbar-item selected link="/">
         <!-- <img slot="icon" src="../assets/demo/icon_nav_button.png"> -->
@@ -29,7 +29,8 @@ export default {
   name: 'app',
   computed: {
     ...mapState({
-      isLoading: state => state.vux.isLoading
+      isLoading: state => state.vux.isLoading,
+      direction: state => state.vux.direction
     })
   }
 }
