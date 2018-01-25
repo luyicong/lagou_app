@@ -74,6 +74,7 @@ export default {
 }
 .page-content{
   flex: 1;
+  padding-top: 46px;
 }
 .footer{
   height: 60px;
