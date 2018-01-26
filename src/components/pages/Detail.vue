@@ -1,7 +1,6 @@
 <template>
     <div id="position-detail">
       <x-header
-        style="position:absolute;top:0;left:0;width:100%;"
         :left-options={showBack:true}
         :title="'职位详情'">
       </x-header>
@@ -23,12 +22,27 @@ export default {
 }
 </script>
 <style scoped>
-#position-detail .vux-header .vux-header-left{
+/*#position-detail .vux-header .vux-header-left{
+  color: #fff;
+}*/
+/*#position-detail .vux-header-left .left-arrow:before{
+  border: 1px solid #fff;
+}*/
+/*.vux-header .vux-header-left a{
+    color: #fff;
+}*/
+#position-detail .vux-header{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+}
+.vux-header .vux-header-left{
   color: #fff;
 }
-/* #position-detail .vux-header-left .left-arrow:before{
-  border-color: #fff;
-} */
+.vux-header .vux-header-left .left-arrow:before{
+  border: 1px solid #fff;
+}
 .detail-content{
   margin-top: 46px;
 }

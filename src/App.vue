@@ -2,7 +2,7 @@
   <div id="app">
     <loading v-model="isLoading"></loading>
     <view-box>
-      <x-header style="position:absolute;top:0;left:0;width:100%;" :left-options={showBack:false} :title="'拉勾网'"></x-header>
+      <x-header style="position:absolute;top:0;left:0;width:100%;z-index:999" :left-options={showBack:false} :title="'拉勾网'"></x-header>
       <!-- <transition name="slide"> -->
           <router-view></router-view>
       <!-- </transition> -->
@@ -12,7 +12,7 @@
           <!-- <img slot="icon" src="../assets/demo/icon_nav_button.png"> -->
           <span slot="label">职位</span>
         </tabbar-item>
-        <tabbar-item show-dot link="/search">
+        <tabbar-item link="/search">
           <!-- <img slot="icon" src="../assets/demo/icon_nav_msg.png"> -->
           <span slot="label">搜索</span>
         </tabbar-item>
@@ -54,7 +54,7 @@ html{
   height:100%;
 }
 body {
-  background-color: #fbf9fe;
+  background-color: #fff;
   height:100%;
   color: #333;
 }
@@ -63,18 +63,4 @@ body {
   /*padding-top:46px;*/
   box-sizing:border-box;
 }
-#app .vux-header{
-  background-color: #00b38a;
-}
-#app .weui-bar__item_on .weui-tabbar__label{
-  color:#00b38a;
-}
-
-// .slide-enter-active, .slide-leave-active{
-//     transition: all 0.3s
-// }
-//
-// .slide-enter, .slide-leave-to{
-//     transform: translate3d(0, 0, 0)
-// }
 </style>
