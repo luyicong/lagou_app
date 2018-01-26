@@ -3,10 +3,9 @@
     <loading v-model="isLoading"></loading>
     <view-box>
       <x-header style="position:absolute;top:0;left:0;width:100%;" :left-options={showBack:false} :title="'拉勾网'"></x-header>
-      <transition
-        :name="viewTransition" :css="!!direction">
-          <router-view class="router-view"></router-view>
-        </transition>
+      <!-- <transition name="slide"> -->
+          <router-view></router-view>
+      <!-- </transition> -->
       <!-- <router-view :transition="'vux-pop-' + (direction === 'forward' ? 'in' : 'out')"></router-view> -->
       <tabbar style="position:fixed;">
         <tabbar-item selected link="/">
@@ -70,4 +69,12 @@ body {
 #app .weui-bar__item_on .weui-tabbar__label{
   color:#00b38a;
 }
+
+// .slide-enter-active, .slide-leave-active{
+//     transition: all 0.3s
+// }
+//
+// .slide-enter, .slide-leave-to{
+//     transform: translate3d(0, 0, 0)
+// }
 </style>

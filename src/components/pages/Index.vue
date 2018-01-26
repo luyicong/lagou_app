@@ -12,6 +12,9 @@
     <div class="footer">
       页面底部
     </div>
+    <!-- <transition name="slide"> -->
+      <router-view></router-view>
+    <!-- </transition> -->
   </div>
 </template>
 
@@ -66,6 +69,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.slide-enter-active, .slide-leave-active{
+    transition: all 0.3s
+}
+
+.slide-enter, .slide-leave-to{
+    transform: translate3d(100%, 0, 0)
+}
 #index-page{
   min-height: 100%;
   /*margin-top: -46px;*/
