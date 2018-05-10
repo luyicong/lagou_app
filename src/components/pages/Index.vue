@@ -12,9 +12,6 @@
     <div class="footer">
       页面底部
     </div>
-    <!-- <transition name="slide"> -->
-      <router-view></router-view>
-    <!-- </transition> -->
   </div>
 </template>
 

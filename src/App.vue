@@ -8,15 +8,15 @@
       <!-- </transition> -->
       <!-- <router-view :transition="'vux-pop-' + (direction === 'forward' ? 'in' : 'out')"></router-view> -->
       <tabbar style="position:fixed;">
-        <tabbar-item selected link="/">
+        <tabbar-item :selected="$route.path === '/'" link="/">
           <!-- <img slot="icon" src="../assets/demo/icon_nav_button.png"> -->
           <span slot="label">职位</span>
         </tabbar-item>
-        <tabbar-item link="/search">
+        <tabbar-item :selected="$route.path === '/search'" link="/search">
           <!-- <img slot="icon" src="../assets/demo/icon_nav_msg.png"> -->
           <span slot="label">搜索</span>
         </tabbar-item>
-        <tabbar-item link="/user">
+        <tabbar-item :selected="$route.path === '/user'" link="/user">
           <!-- <img slot="icon" src="../assets/demo/icon_nav_article.png"> -->
           <span slot="label">我的</span>
         </tabbar-item>
